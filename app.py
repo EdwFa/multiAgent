@@ -306,11 +306,11 @@ This is passed into the `{helper_response}` variable in the system prompt. \
     # """)
 
 # Main app layout
-st.header("Mixture of Agents", anchor=False)
-st.write("A demo of the Mixture of Agents architecture proposed by Together AI, Powered by Groq LLMs.")
+st.header("Multi Agents", anchor=False)
+st.write("A prototype of the Multi of Agents architecture, Powered by Groq LLMs.")
 
 # Display current configuration
-with st.status("Current MOA Configuration", expanded=True, state='complete') as config_status:
+with st.status("Current Configuration", expanded=True, state='complete') as config_status:
     # st.image("./static/moa_groq.svg", caption="Mixture of Agents Workflow", use_column_width='always')
     st.markdown(f"**Main Agent Config**:")
     new_layer_agent_config = st_ace(
