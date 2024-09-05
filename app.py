@@ -297,13 +297,13 @@ This is passed into the `{helper_response}` variable in the system prompt. \
             except Exception as e:
                 st.error(f"Error updating configuration: {str(e)}")
 
-    st.markdown("---")
-    st.markdown("""
-    ### Credits
-    - MOA: [Together AI](https://www.together.ai/blog/together-moa)
-    - LLMs: [Groq](https://groq.com/)
-    - Paper: [arXiv:2406.04692](https://arxiv.org/abs/2406.04692)
-    """)
+    # st.markdown("---")
+    # st.markdown("""
+    # ### Credits
+    # - MOA: [Together AI](https://www.together.ai/blog/together-moa)
+    # - LLMs: [Groq](https://groq.com/)
+    # - Paper: [arXiv:2406.04692](https://arxiv.org/abs/2406.04692)
+    # """)
 
 # Main app layout
 st.header("Mixture of Agents", anchor=False)
