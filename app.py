@@ -155,8 +155,8 @@ st.set_page_config(
 
 valid_model_names = [model.id for model in Groq().models.list().data if not (model.id.startswith("whisper") or model.id.startswith("llama-guard"))]
 
-st.markdown("<a href='https://groq.com'><img src='app/static/banner.png' width='500'></a>", unsafe_allow_html=True)
-st.write("---")
+# st.markdown("<a href='https://groq.com'><img src='app/static/banner.png' width='500'></a>", unsafe_allow_html=True)
+# st.write("---")
 
 # Initialize session state
 if "messages" not in st.session_state:
@@ -311,7 +311,7 @@ st.write("A demo of the Mixture of Agents architecture proposed by Together AI, 
 
 # Display current configuration
 with st.status("Current MOA Configuration", expanded=True, state='complete') as config_status:
-    st.image("./static/moa_groq.svg", caption="Mixture of Agents Workflow", use_column_width='always')
+    # st.image("./static/moa_groq.svg", caption="Mixture of Agents Workflow", use_column_width='always')
     st.markdown(f"**Main Agent Config**:")
     new_layer_agent_config = st_ace(
         value=json.dumps(st.session_state.moa_main_agent_config, indent=2),
