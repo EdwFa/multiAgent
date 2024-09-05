@@ -247,7 +247,7 @@ with st.sidebar:
             auto_update=True
         )
 
-        with st.expander("Optional Main Agent Params"):
+        with st.expander("Optional Main Agent Params", expanded=True):
             tooltip_str = """\
 Main Agent configuration that will respond to the user based on the layer agent outputs.
 Valid fields:
