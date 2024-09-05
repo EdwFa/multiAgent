@@ -5,6 +5,7 @@ from typing import Iterable, Dict, Any
 import streamlit as st
 from streamlit_ace import st_ace
 from groq import Groq
+import os
 
 from moa.agent import MOAgent
 from moa.agent.moa import ResponseChunk, MOAgentConfig
@@ -70,6 +71,15 @@ rec_layer_agent_config = {
         "temperature": 0.5
     },
 }
+
+# Ключи интер=фейсов
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", None)
+if 'api_key' not in st.session_state:
+    st.session_state.api_key = GROQ_API_KEY
+if 'groq' not in st.session_state:
+    if GROQ_API_KEY:
+        st.session_state.groq = Groq()
+
 
 # Helper functions
 def json_to_moa_config(config_file) -> Dict[str, Any]:
