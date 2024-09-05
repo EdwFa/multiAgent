@@ -310,7 +310,7 @@ st.header("Multi Agents", anchor=False)
 st.write("A prototype of the Multi of Agents architecture, Powered by Groq LLMs.")
 
 # Display current configuration
-with st.status("Current Configuration", expanded=True, state='complete') as config_status:
+with st.status("Current Configuration", expanded=False, state='complete') as config_status:
     # st.image("./static/moa_groq.svg", caption="Mixture of Agents Workflow", use_column_width='always')
     st.markdown(f"**Main Agent Config**:")
     new_layer_agent_config = st_ace(
