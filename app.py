@@ -145,10 +145,10 @@ def set_moa_agent(
 
 # App
 st.set_page_config(
-    page_title="Mixture-Of-Agents Powered by Groq",
+    page_title="Multi LLM-Agents Powered by Groq",
     page_icon='static/favicon.ico',
         menu_items={
-        'About': "## Groq Mixture-Of-Agents \n Powered by [Groq](https://groq.com)"
+        'About': "## Groq Milti-LLM-Agents \n Powered by [Groq](https://groq.com)"
     },
     layout="wide"
 )
@@ -166,10 +166,10 @@ set_moa_agent()
 
 # Sidebar for configuration
 with st.sidebar:
-    st.title("MOA Configuration")
+    st.title("Configuration")
     # upl_col, load_col = st.columns(2)
     st.download_button(
-        "Download Current MoA Configuration as JSON", 
+        "Download Current Configuration to JSON",
         data=json.dumps({
             **st.session_state.moa_main_agent_config,
             'moa_layer_agent_config': st.session_state.moa_layer_agent_config
